@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Страница регистрации</title>
+    <link rel="stylesheet" href="{% static 'reg_page/design.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать!</h1>
+        <p>Пожалуйста, заполните следующую информацию для регистрации</p>
+    </header>
+
+    <main>
+        <form>
+            <input type="text" name="username" placeholder="Имя пользователя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <div class="buttons">
+                <button type="submit">Зарегистрироваться</button>
+            </div>
+        </form>
+        <div>
+            <p>Уже есть аккаунт? <a href="{% url 'users:login' %}" class="button-link">Войти</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Ваша компания. Все права защищены.</p>
+    </footer>
+</body>
+</html>
